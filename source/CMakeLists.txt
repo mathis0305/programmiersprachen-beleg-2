@@ -24,4 +24,8 @@ target_link_libraries(tests
   ${OPENGL_LIBRARIES}
   )
 
-
+# Build tasks
+add_executable(aufgabe-2_2
+  vec2.hpp
+  vec2.cpp
+  )
