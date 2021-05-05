@@ -1,5 +1,6 @@
 #ifndef  VEC2_HPP
 #define VEC2_HPP
+#include <iostream>
 
 /*EXPLANATION include guards are commands to avoid double includes.
   Before actually including this file they check if some of the files
@@ -10,10 +11,14 @@
 
 // Vec2 data type definition
 struct Vec2 {
-	/*TODO add member variables with
-	  default member initialisation */
 	float x = 0.0f;
 	float y = 0.0f;
+
+	Vec2& operator+=(Vec2 const& rhs);
+	Vec2& operator-=(Vec2 const& rhs);
+	Vec2& operator*=(float rhs);
+	Vec2& operator/=(float rhs);
 };
+
 
 #endif // VEC2_HPP
