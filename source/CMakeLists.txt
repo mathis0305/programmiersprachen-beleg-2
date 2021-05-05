@@ -29,3 +29,8 @@ add_executable(aufgabe-2_2
   vec2.hpp
   vec2.cpp
   )
+
+add_executable(aufgabe-2.5
+  mat2.hpp
+  mat2.cpp
+  )
