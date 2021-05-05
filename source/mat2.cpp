@@ -28,6 +28,15 @@ Vec2 operator*(Mat2 const& m, Vec2 const& v) {
 	return v_new;
 }
 
+Mat2 make_rotation_mat2(float phi) {
+	Mat2 rot_mat;
+	rot_mat.e_00 = cos(phi);
+	rot_mat.e_10 = -sin(phi);
+	rot_mat.e_01 = sin(phi);
+	rot_mat.e_11 = cos(phi);
+
+	return rot_mat;
+}
 
 Mat2 m1;
 Mat2 m2{ 0.5f, 1.0f, 1.5f, 2.0f };

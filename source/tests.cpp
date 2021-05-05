@@ -83,6 +83,13 @@ TEST_CASE("test matrix-vector multiplication", "[mat_vec_multi]") {
 	REQUIRE(c.x == Approx(5.0f));
 }
 
+TEST_CASE("test rotation matrix", "[rot_mat]") {
+	REQUIRE(make_rotation_mat2(3.14159265359f).e_00 == Approx(-1.0f));
+	REQUIRE(make_rotation_mat2(3.14159265359f).e_10 == Approx(0.0f));
+	REQUIRE(make_rotation_mat2(3.14159265359f).e_01 == Approx(0.0f));
+	REQUIRE(make_rotation_mat2(3.14159265359f).e_11 == Approx(-1.0f));
+}
+
 int main(int argc, char *argv[]) {
     return Catch::Session().run(argc, argv);
 }
