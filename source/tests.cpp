@@ -3,12 +3,31 @@
 #include "vec2.cpp"
 
 TEST_CASE("test_struct_vec2", "[vec2]") {
+	// definition tests
 	REQUIRE(a.x == 0.0f);
 	REQUIRE(a.y == 0.0f);
 	REQUIRE(b.x == 5.1f);
 	REQUIRE(b.y == -9.3f);
 }
 
+TEST_CASE("test operators", "[op]") {
+	// addition tests
+	REQUIRE((a += b).x == 5.1f);
+	REQUIRE(a.y        == -9.3f);
+
+	// subtraction tests
+	REQUIRE((a -= b).x == 0.0f);
+	REQUIRE(a.y == 0.0f);
+
+	// multiplying tests
+	REQUIRE((c *= 2).x == 10.0f);
+	REQUIRE(c.y == 20.0f);
+
+	// division tests
+	REQUIRE((c /= 2).x == 5.0f);
+	REQUIRE(c.y == 10.0f);
+}
+
 int main(int argc, char *argv[]) {
-  return Catch::Session().run(argc, argv);
+    return Catch::Session().run(argc, argv);
 }
