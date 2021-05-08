@@ -52,6 +52,10 @@ int main(int argc, char* argv[])
     
     win.draw_text(text_offset_x, text_offset_y, font_size, display_text);
 
+
+
+    win.draw_line(0.0f, 0.0f, 100.0f, 100.0f, 1.0f, 0.0f, 0.0f);
+
     win.update();
   }
 
