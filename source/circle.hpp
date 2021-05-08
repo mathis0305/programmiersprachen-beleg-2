@@ -1,10 +1,13 @@
 #ifndef CIRCLE.HPP
-#define CIRCLE.HPP
+#define CIRCLE_HPP
 #include "vec2.hpp"
 
 class circle {
-	Vec2 center = { 1.0f, 1.0f };
-	float radius = 1.0f;
+public:
+	Vec2 center_ = { 1.0f, 1.0f };
+	float radius_ = 1.0f;
+
+	float circumference() const;
 };
 
-#endif // CIRCLE.HPP
+#endif // CIRCLE_HPP
