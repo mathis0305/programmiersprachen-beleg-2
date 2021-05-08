@@ -34,3 +34,29 @@ add_executable(aufgabe-2.5
   mat2.hpp
   mat2.cpp
   )
+
+add_executable(aufgabe-2.7
+  color.hpp
+  )
+
+add_executable(aufgabe-2.8_1
+  circle.hpp
+  circle.cpp
+  )
+
+add_executable(aufgabe-2.8_2
+  rectangle.hpp
+  rectangle.cpp
+  )
+
+
+
+
+
+
+
+
+
+
+
+
