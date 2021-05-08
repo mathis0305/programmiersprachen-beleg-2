@@ -16,4 +16,4 @@ float rectangle::circumference() const {
 }
 
 rectangle r1;
-rectangle r2{ {-5.0, -5.0}, {5.0, 5.0} };
+rectangle r2{ {-5.0, -5.0}, {5.0, 5.0}, {1.0, 0.0, 0.0} };
