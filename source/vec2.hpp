@@ -1,5 +1,6 @@
 #ifndef  VEC2_HPP
 #define VEC2_HPP
+
 #include <iostream>
 
 /*EXPLANATION include guards are commands to avoid double includes.
@@ -18,6 +19,7 @@ struct Vec2 {
 	Vec2& operator-=(Vec2 const& rhs);
 	Vec2& operator*=(float rhs);
 	Vec2& operator/=(float rhs);
+
 };
 
 Vec2 operator +(Vec2 const& u, Vec2 const& v);

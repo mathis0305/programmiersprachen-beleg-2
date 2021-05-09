@@ -28,6 +28,7 @@ Vec2& Vec2::operator/=(float rhs) {
 	return *this;
 }
 
+
 Vec2 operator +(Vec2 const& u, Vec2 const& v) {
 	Vec2 temp{ u };
 
@@ -59,7 +60,4 @@ Vec2 operator /(Vec2 const& v, float s) {
 }
 
 
-Vec2 a;
-Vec2 b{ 5.1f, -9.3f };
-Vec2 c{ 5.0f, 10.0f };
-Vec2 d{ -8.6f, 24.9f };
+

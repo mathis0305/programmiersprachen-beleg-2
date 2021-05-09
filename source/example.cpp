@@ -2,6 +2,9 @@
 #include <GLFW/glfw3.h>
 #include <utility>
 #include <cmath>
+#include "rectangle.hpp"
+#include "circle.hpp"
+
 
 
 int main(int argc, char* argv[])
@@ -54,7 +57,13 @@ int main(int argc, char* argv[])
 
 
 
-    win.draw_line(0.0f, 0.0f, 100.0f, 100.0f, 1.0f, 0.0f, 0.0f);
+    Rect r3{ {10.0f, 10.0f}, {100.0f, 100.0f}, {1.0f, 0.0f, 0.0f} };
+
+    Circle c3{ {300.0f, 300.0f}, 200.0f, {1.0, 1.0, 1.0} };
+
+    r3.draw(win);
+    c3.draw(5000, win);
+    
 
     win.update();
   }

@@ -38,7 +38,5 @@ Mat2 make_rotation_mat2(float phi) {
 	return rot_mat;
 }
 
-Mat2 m1;
-Mat2 m2{ 0.5f, 1.0f, 1.5f, 2.0f };
-Mat2 m3{ 2.5f, 3.0f, 3.5f, 4.0f };
-Mat2 m4{ 4.5f, 5.0f, 5.5f, 6.0f };
+
+

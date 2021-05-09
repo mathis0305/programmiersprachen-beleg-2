@@ -1,9 +1,28 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
-#include "vec2.cpp"
-#include "mat2.cpp"
-#include "circle.cpp"
-#include "rectangle.cpp"
+#include <cmath> 
+#include "vec2.hpp"
+#include "mat2.hpp"
+#include "circle.hpp"
+#include "rectangle.hpp"
+
+
+
+Vec2 a;
+Vec2 b{ 5.1f, -9.3f };
+Vec2 c{ 5.0f, 10.0f };
+Vec2 d{ -8.6f, 24.9f };
+
+Mat2 m1;
+Mat2 m2{ 0.5f, 1.0f, 1.5f, 2.0f };
+Mat2 m3{ 2.5f, 3.0f, 3.5f, 4.0f };
+Mat2 m4{ 4.5f, 5.0f, 5.5f, 6.0f };
+
+Circle c1;
+Circle c2{ {2.0f, -3.3f}, 5.2f, {0.0f, 1.0f, 0.0f} };
+
+Rect r1;
+Rect r2{ {5.0f, 5.0f}, {-5.0f, -5.0f}, {1.0f, 0.0f, 0.0f} };
 
 // Test 1: struct vec2
 TEST_CASE("test struct vec2", "[vec2]") {

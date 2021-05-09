@@ -1,6 +1,6 @@
 #include "rectangle.hpp"
 
-float rectangle::circumference() const {
+float Rect::circumference() const {
 	float dif_x = max_.x - min_.x;
 	float dif_y = max_.y - min_.y;
 
@@ -14,5 +14,9 @@ float rectangle::circumference() const {
 	return 2.0f*dif_x + 2.0f*dif_y;
 }
 
-rectangle r1;
-rectangle r2{ {-5.0f, -5.0f}, {5.0f, 5.0f}, {1.0f, 0.0f, 0.0f} };
+void Rect::draw(Window const& win) {
+	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b, 2.0f);
+	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b, 2.0f);
+	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b, 2.0f);
+	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b, 2.0f);
+}

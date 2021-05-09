@@ -1,8 +1,17 @@
 # Build example
 add_executable(example
   window.cpp
+  window.hpp
   glew.c
   example.cpp
+  vec2.hpp
+  vec2.cpp
+  mat2.hpp
+  mat2.cpp
+  rectangle.hpp
+  rectangle.cpp
+  circle.hpp
+  circle.cpp
   )
 target_link_libraries(example
   glfw
@@ -16,6 +25,16 @@ add_dependencies(example glfw nanovg ${COPY_BINARY})
 add_executable(tests
   glew.c
   tests.cpp
+  window.cpp
+  window.hpp
+  vec2.hpp
+  vec2.cpp
+  mat2.hpp
+  mat2.cpp
+  rectangle.hpp
+  rectangle.cpp
+  circle.hpp
+  circle.cpp
   )
 target_link_libraries(tests
   glfw
@@ -23,33 +42,7 @@ target_link_libraries(tests
   nanovg
   ${OPENGL_LIBRARIES}
   )
-
-# Build tasks
-add_executable(aufgabe-2_2
-  vec2.hpp
-  vec2.cpp
-  )
-
-add_executable(aufgabe-2.5
-  mat2.hpp
-  mat2.cpp
-  )
-
-add_executable(aufgabe-2.7
-  color.hpp
-  )
-
-add_executable(aufgabe-2.8_1
-  circle.hpp
-  circle.cpp
-  )
-
-add_executable(aufgabe-2.8_2
-  rectangle.hpp
-  rectangle.cpp
-  )
-
-
+#add_dependencies(tests examples ${COPY_BINARY})
 
 
 
