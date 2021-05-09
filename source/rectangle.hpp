@@ -13,6 +13,7 @@ public:
 
 	float circumference() const;
 	void draw(Window const& win);
+	void draw(Window const& win, float thickness);
 };
 
 #endif // RECTANGLE_HPP

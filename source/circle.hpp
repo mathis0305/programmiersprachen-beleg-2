@@ -14,6 +14,7 @@ public:
 
 	float circumference() const;
 	void draw(int num, Window const& win);
+	void draw(int num, Window const& win, float thickness);
 };
 
 #endif // CIRCLE_HPP

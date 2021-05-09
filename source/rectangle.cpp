@@ -15,8 +15,15 @@ float Rect::circumference() const {
 }
 
 void Rect::draw(Window const& win) {
-	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b, 2.0f);
-	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b, 2.0f);
-	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b, 2.0f);
-	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b, 2.0f);
+	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b);
+	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b);
+	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b);
+	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b);
+}
+
+void Rect::draw(Window const& win, float thickness) {
+	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b, thickness);
+	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b, thickness);
+	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b, thickness);
+	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b, thickness);
 }

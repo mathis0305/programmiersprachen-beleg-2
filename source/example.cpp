@@ -58,11 +58,15 @@ int main(int argc, char* argv[])
 
 
     Rect r3{ {10.0f, 10.0f}, {100.0f, 100.0f}, {1.0f, 0.0f, 0.0f} };
+    Rect r4{ {300.0f, 300.0f}, {150.0f, 150.0f}, {0.0f, 0.0f, 1.0f} };
 
-    Circle c3{ {300.0f, 300.0f}, 200.0f, {1.0, 1.0, 1.0} };
+    Circle c3{ {450.0f, 450.0f}, 200.0f, {1.0, 1.0, 1.0} };
+    Circle c4{ {450.0f, 450.0f}, 90.0f, {1.0, 0.0, 1.0} };
 
     r3.draw(win);
+    r4.draw(win, 8.0);
     c3.draw(5000, win);
+    c4.draw(5000, win, 5.5);
     
 
     win.update();
