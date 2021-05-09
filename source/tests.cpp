@@ -22,7 +22,7 @@ Circle c1;
 Circle c2{ {2.0f, -3.3f}, 5.2f, {0.0f, 1.0f, 0.0f} };
 
 Rect r1;
-Rect r2{ {5.0f, 5.0f}, {-5.0f, -5.0f}, {1.0f, 0.0f, 0.0f} };
+Rect r2{ {-5.0f, -5.0f}, {5.0f, 5.0f}, {1.0f, 0.0f, 0.0f} };
 
 // Test 1: struct vec2
 TEST_CASE("test struct vec2", "[vec2]") {
@@ -123,6 +123,15 @@ TEST_CASE("test circumference", "[circumference]") {
 	REQUIRE(r1.circumference() == Approx(4.0f));
 	REQUIRE(r2.circumference() == Approx(40.0f));
 }
+
+// Test 9: is_inside method
+TEST_CASE("test is_inside", "[inside]") {
+	REQUIRE(c2.is_inside({ 1.0f, -4.0f }) == true);
+	REQUIRE(c2.is_inside({ 10.0f, -3.0f }) == false);
+	REQUIRE(r2.is_inside({ 1.0f, -2.0f }) == true);
+	REQUIRE(r2.is_inside({ 10.0f, -4.0f }) == false);
+}
+
 int main(int argc, char *argv[]) {
     return Catch::Session().run(argc, argv);
 }

@@ -14,6 +14,7 @@ public:
 	float circumference() const;
 	void draw(Window const& win);
 	void draw(Window const& win, float thickness);
+	bool is_inside(Vec2 const& m_pos);
 };
 
 #endif // RECTANGLE_HPP
