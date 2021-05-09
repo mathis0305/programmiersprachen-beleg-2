@@ -7,7 +7,7 @@
 #include "rectangle.hpp"
 
 
-
+// object declaration
 Vec2 a;
 Vec2 b{ 5.1f, -9.3f };
 Vec2 c{ 5.0f, 10.0f };
@@ -23,6 +23,7 @@ Circle c2{ {2.0f, -3.3f}, 5.2f, {0.0f, 1.0f, 0.0f} };
 
 Rect r1;
 Rect r2{ {-5.0f, -5.0f}, {5.0f, 5.0f}, {1.0f, 0.0f, 0.0f} };
+
 
 // Test 1: struct vec2
 TEST_CASE("test struct vec2", "[vec2]") {

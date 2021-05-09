@@ -15,6 +15,7 @@ struct Vec2 {
 	float x = 0.0f;
 	float y = 0.0f;
 
+	// operator
 	Vec2& operator+=(Vec2 const& rhs);
 	Vec2& operator-=(Vec2 const& rhs);
 	Vec2& operator*=(float rhs);
@@ -22,6 +23,7 @@ struct Vec2 {
 
 };
 
+// Vec2 operator
 Vec2 operator +(Vec2 const& u, Vec2 const& v);
 Vec2 operator -(Vec2 const& u, Vec2 const& v);
 Vec2 operator *(Vec2 const& v, float s);

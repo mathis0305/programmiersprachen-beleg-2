@@ -1,5 +1,7 @@
 #include <array>
 #include "mat2.hpp"
+
+// multiplication
 Mat2& Mat2::operator *=(Mat2 const& rhs) {
 	float temp_00 = e_00;
 	float temp_10 = e_10;
@@ -14,12 +16,14 @@ Mat2& Mat2::operator *=(Mat2 const& rhs) {
 	return *this;
 }
 
+// multiplication
 Mat2 operator *(Mat2 const& m1, Mat2 const& m2) {
 	Mat2 temp{ m1 };
 
 	return temp *= m2;
 }
 
+// matrix-vector multiplication
 Vec2 operator*(Mat2 const& m, Vec2 const& v) {
 	Vec2 v_new;
 	v_new.x = m.e_00 * v.x + m.e_10 * v.y;

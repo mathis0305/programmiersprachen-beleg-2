@@ -1,5 +1,6 @@
 #include "rectangle.hpp"
 
+
 float Rect::circumference() const {
 	float dif_x = max_.x - min_.x;
 	float dif_y = max_.y - min_.y;
@@ -14,28 +15,41 @@ float Rect::circumference() const {
 	return 2.0f*dif_x + 2.0f*dif_y;
 }
 
+
 void Rect::draw( Window const& win) {
+
+	// double thickness if mouse is inside the rectangle
 	float thickness = 1.0f;
 	if (is_inside({ static_cast<float>(win.mouse_position().first), static_cast<float>(win.mouse_position().second) }) == true) {
 		thickness = thickness * 2.0f;
 	}
+
+	// actual draw function
 	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b, thickness);
 }
 
+
 void Rect::draw( Window const& win, float thickness) {
+
+	// double thickness if mouse is inside the rectangle
 	if (is_inside({ static_cast<float>(win.mouse_position().first), static_cast<float>(win.mouse_position().second) }) == true) {
 		thickness = thickness * 2.0f;
 	}
+
+	// actual draw function
 	win.draw_line(min_.x, min_.y, min_.x, max_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(min_.x, max_.y, max_.x, max_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(max_.x, max_.y, max_.x, min_.y, color_.r, color_.g, color_.b, thickness);
 	win.draw_line(max_.x, min_.y, min_.x, min_.y, color_.r, color_.g, color_.b, thickness);
 }
 
+
 bool Rect::is_inside(Vec2 const& m_pos) {
+
+	// return true if mouse is inside rectangle
 	if (m_pos.x >= min_.x && m_pos.x <= max_.x && m_pos.y >= min_.y && m_pos.y <= max_.y) {
 		return true;
 	}
